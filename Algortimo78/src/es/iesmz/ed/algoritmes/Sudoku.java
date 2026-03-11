@@ -1,12 +1,26 @@
 package es.iesmz.ed.algoritmes;
 
+/**
+ * Clase que representa un Sudoku y permite comprobar si es correcto.
+ * Un Sudoku es correcto si cada fila, columna y bloque 3x3 contiene
+ * los números del 1 al 9 exactamente una vez.
+ */
 public class Sudoku {
     private int[][] S;
 
+    /**
+     * Constructor de la clase Sudoku.
+     * @param s Matriz 9x9 que representa el Sudoku a comprobar.
+     */
     public Sudoku(int[][] s) {
         S = s;
     }
 
+    /**
+     * Comprueba si el Sudoku es correcto.
+     * Revisa filas, columnas y bloques 3x3.
+     * @return true si el Sudoku es válido, false si hay repeticiones o números fuera de rango.
+     */
     public boolean esCorrecte() {
         for (int i = 0; i < 9; i++) {
             boolean[] fila = new boolean[10];
